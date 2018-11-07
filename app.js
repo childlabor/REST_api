@@ -2,6 +2,8 @@ const Koa = require('koa');
 
 const logger = require('koa-logger');
 
+const koaBody = require('koa-body');
+
 const bodyParser = require('koa-bodyparser');
 
 const router = require('koa-router')();
@@ -17,6 +19,13 @@ const app = new Koa();
 
 // 打印日志
 app.use(logger());
+
+app.use(koaBody({
+    multipart: true,
+    formidable: {
+        maxFileSize: 200*1024*1024	// 设置上传文件大小最大限制，默认2M
+    }
+}));
 
 // session maxAge设置会话保存时间{maxAge: 300000},maxAge: 'session'表示浏览器关闭会话结束
 // app.keys = ['some secret hurr']; 

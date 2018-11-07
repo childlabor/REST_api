@@ -17,11 +17,15 @@
     "repository": {},
     "dependencies": {
         "koa": "2.0.0",
+        "koa-body": "^4.0.4",
         "koa-bodyparser": "3.2.0",
         "koa-logger": "3.1.0",
         "koa-router": "^7.0.0",
         "koa-session": "*",
         "mysql": "2.11.1",
         "sequelize": "3.24.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.6"
     }
 }

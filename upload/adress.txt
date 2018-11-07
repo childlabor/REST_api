@@ -1,0 +1,31 @@
+用户名：tong
+默认密码：tong318318
+
+企业邮箱用户名：tong
+密码：Sound318
+
+S3账户：638953167227
+S3用户名： tong
+S3密码： 
+
+CDN访问：
+    https://signin.aliyun.com/soundbus/login.htm?spm=5176.2020520153.10101.d1.2cc34945AQzQls
+    子账号：tong@soundbus
+    密码：88888888
+
+teambition:
+账号： tong@soundbus.cn
+密码： tong@sou
+
+https://tongs.gitbook.io/repository/.
+
+
+预上线：
+https://t2o.sonicmoving.cn/staging/credits/platform/index.html 声动兔管理后台
+https://t2o.sonicmoving.cn/staging/activity/index.html 活动管理平台
+https://site-staging.sonicmoving.cn/template/pc/index.html 活动运营平台
+
+qa:
+https://t2o.sonicmoving.cn/qa/credits/platform/index.html 声动兔管理后台
+https://t2o.sonicmoving.cn/qa/activity/index.html 活动管理平台
+https://site-qa.sonicmoving.cn/template/pc/index.html 活动运营平台

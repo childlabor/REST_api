@@ -1,5 +1,5 @@
 // 导入模板引擎
-const koaBody = require('koa-body');
+// const koaBody = require('koa-body');
 
 const fs = require('fs');
 
@@ -14,8 +14,8 @@ var fn_upload = async (ctx, next) => {
 	  if ('POST' != ctx.method) return await next();
 	   
 		var dirname = path.resolve(__dirname, '..');
-		
-	  const file = ctx.request.body.files.file;
+
+	  const file = ctx.request.files.file;
 	  const reader = fs.createReadStream(file.path);
 	 
 	  const stream = fs.createWriteStream(path.join(dirname, '/upload', file.name));
@@ -41,10 +41,8 @@ var fn_upload = async (ctx, next) => {
 		  }
 		});
 		
-	  ctx.redirect('/index');
+	  // ctx.redirect('/index');
 }
 
 // 导出模板引擎渲染方法
-module.exports = {
-    'POST /upload': fn_upload
-};
+module.exports = fn_upload;
