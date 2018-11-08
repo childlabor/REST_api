@@ -40,7 +40,8 @@ var fn_upload = async (ctx, next) => {
 		    ext: ext
 		  }
 		});
-		
+
+		ctx.rest('上传成功');
 	  // ctx.redirect('/index');
 }
 
