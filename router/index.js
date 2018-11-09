@@ -8,6 +8,7 @@ const router = new Router({
 
 router
     // api模块
+    .post('/orctest', apitest.orc_test)
     .post('/upload', upload)
     .post('/test', apitest.api_test)
     .get('/test2', apitest.api_test2);

@@ -15,6 +15,18 @@ const router = require('koa-router')();
 const rest = require('./rest');
 const apiRouter = require('./router');
 
+// const orcApi = require('./orc.js');
+
+// var HttpClient = require("baidu-aip-sdk").HttpClient;
+// HttpClient.setRequestInterceptor(function(requestOptions) {
+//     // 查看参数
+//     console.log(requestOptions)
+//     // 修改参数
+//     requestOptions.timeout = 5000;
+//     // 返回参数
+//     return requestOptions;
+// });
+
 const app = new Koa();
 
 // const isProduction = process.env.NODE_ENV === 'production';
@@ -49,6 +61,8 @@ app.use(bodyParser());
 
 // 负责给ctx加上rest()来使用api接口REST
 app.use(rest.restify()); 
+
+// app.use(orcApi.orctest()); 
 
 // api
 app.use(apiRouter.routes());
