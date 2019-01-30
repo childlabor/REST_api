@@ -15,7 +15,6 @@ const router = require('koa-router')();
 const rest = require('./rest');
 const apiRouter = require('./router');
 
-// const orcApi = require('./orc.js');
 
 // var HttpClient = require("baidu-aip-sdk").HttpClient;
 // HttpClient.setRequestInterceptor(function(requestOptions) {
@@ -39,7 +38,7 @@ const index = router.get('/', ctx => {
 app.use(index);
 
 // 引入依赖 解决请求跨域问题
-app.use(cors());
+// app.use(cors());
 
 // 打印日志
 app.use(logger());
@@ -61,13 +60,12 @@ app.use(bodyParser());
 
 // 负责给ctx加上rest()来使用api接口REST
 app.use(rest.restify()); 
-
-// app.use(orcApi.orctest()); 
+ 
 
 // api
 app.use(apiRouter.routes());
 
 // 端口监听
-app.listen(3000);
-console.log("SERVER START... PORT 3000...");
+app.listen(8000);
+console.log("SERVER START... PORT 8000...");
 console.log("------------------------------------>  _/\\__/\\__/\\__/\\__/\\__/\\_  <-------------------------------------- ");
